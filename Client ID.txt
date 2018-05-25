@@ -1,0 +1,9 @@
+
+/* from https://foursquare.com/developers/apps*/
+
+Client ID
+A5YQW02V1ENTLEICYKHP0VSRO5HSFSRWUWQ5C5UDFT4JXBVD
+
+/////////////////////////
+Client Secret
+5UOEEYOVPBWLIJ3I22C50NURST4JGNY1ULG43XPIGWTW3NIF

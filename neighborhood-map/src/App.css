@@ -1,0 +1,119 @@
+
+html,
+body,
+#root,
+.containerApp,
+.containerMap {
+  height: 100%;
+  margin: 0;
+  font-family:  sans-serif;
+}
+
+.side_Bar {}
+
+
+.header {
+  
+  text-align: center;
+  font-weight:100 ;
+  color: #fff;
+}
+
+.listOfPlace {
+  width: 300px;
+  height: calc(100% - 120px);
+  position: fixed;
+  background: #000;
+  margin-top: 118px;
+}
+
+.location {
+  list-style: none;
+  padding: 0;
+}
+
+.place {
+  padding: 10px 15px;
+  color: #fff;
+}
+
+.place:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.heading {
+  position: fixed;
+  width: 300px;
+  background: #000;
+}
+
+.filter {
+  width: 300px;
+  border: 0;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 11px;
+  
+}
+
+.opening_screen{
+ 
+  bottom: 0;
+  width: 300px;
+  background: #fff;
+  padding: 0 20px 20px;
+  z-index: 1;
+}
+
+.x_screen {
+  top: 0;
+  padding: 10px 15px;
+  font-size: 20px;
+  color: #9a9a99;
+ 
+}
+
+.x_screen,
+.opening_screen{
+   position: absolute;
+    right: 0;
+}
+
+
+.x_screen,
+.place
+{
+  cursor: pointer;
+}
+.loc-name {
+  margin-top: 45px;
+}
+
+.loc-name {
+  margin-bottom: 0;
+}
+
+.Addressing,
+.x_screen,
+.property {
+  margin: 0;
+}
+
+.property
+{
+  color: red;
+  margin-bottom: 11px;
+}
+
+@media screen and (max-width: 500px) {
+.opening_screen{
+    width:200px;
+  } 
+  
+  .info-window,
+  .info-window img {
+    width: 250px;
+  }
+  
+}

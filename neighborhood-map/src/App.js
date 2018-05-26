@@ -16,8 +16,8 @@ class App extends Component {
        this.Click_Marker = this.Click_Marker.bind(this);
        this.closing= this.closing.bind(this);
        this.information = this.information.bind(this);
-      
        this.info = this.info.bind(this);
+       this.error = this.info.bind(this);
      }
 
   MarkerHandling(locations) {
@@ -44,7 +44,7 @@ class App extends Component {
           sLocation: v.response.venue
         });
         document.querySelector('.opening_screen').focus();
-      })
+      }).catch(e => {this.error(); });
   }
 
   info(){
@@ -70,6 +70,16 @@ class App extends Component {
     })
   }
 
+error(){
+
+    document.querySelector('.e').style.opacity = 1;
+    setTimeout(() => {
+      document.querySelector('.e').style.opacity = 0;
+    }, 2000);
+}
+
+
+
   render() {
     return (
       <div className='containerApp'>
@@ -87,7 +97,7 @@ class App extends Component {
 
           closing_win={this.closing}
           click_m={this.Click_Marker}
-          
+           Error={this.error}
            />
 
         {this.state.sLocation && (<InformationScreen
@@ -96,7 +106,7 @@ class App extends Component {
                       clientID: 'A5YQW02V1ENTLEICYKHP0VSRO5HSFSRWUWQ5C5UDFT4JXBVD',
                       clientSecret: '5UOEEYOVPBWLIJ3I22C50NURST4JGNY1ULG43XPIGWTW3NIF'})}
           closing_win={this.closing} />)}
-        
+         <div className='e'>  OOPS, loading error </div>
       </div>
     );
   }

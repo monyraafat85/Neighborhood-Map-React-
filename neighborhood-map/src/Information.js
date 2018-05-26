@@ -79,11 +79,11 @@ Googleplex(){
     return (
       <div>
         <div className='side_Bar'>
-          <div className='heading' >
+          <div className='heading' role='heading' >
             <h1 className='header'>Bart Locations</h1>
             {this.In_field()}
           </div>
-          <div className='listOfPlace'>
+          <div className='listOfPlace' role='region'>
             {this.obtaining_loc()}
           </div>
         </div>

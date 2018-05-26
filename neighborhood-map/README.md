@@ -1,4 +1,6 @@
-﻿1- Usage
+﻿ this project (Neighborhood-Map-React)
+
+1- Usage
 
 You need Node.js installed on your computer to run the app
 

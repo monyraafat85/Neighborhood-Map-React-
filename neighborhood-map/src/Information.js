@@ -59,7 +59,7 @@ Googleplex(){
   In_field() {
     const { q } = this.state;
 
-    return <input  role="search" aria-labelledby="searchbutton" className='filter' type='text' value={q}
+    return <input  role="search" aria-label="searchbutton" className='filter' type='text' value={q}
       onChange={event => this.updating(event.target.value)} placeholder='Search' />
   }
 
@@ -68,7 +68,7 @@ Googleplex(){
       <ol className='location' aria-label='Location _list' role='listbox' >
         {this.LocFilter().map((t, num) =>
           <li
-            key={num}  tabIndex="-1"  role='option' className='place' onClick={() => {this.props.Click_place(num)}}> {t.name}
+              tabIndex={num + 2}   key={num}   role='option' className='place' onClick={() => {this.props.Click_place(num)}}> {t.name}
           </li>
         )}
       </ol>

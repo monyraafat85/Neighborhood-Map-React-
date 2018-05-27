@@ -44,9 +44,7 @@ class App extends Component {
           sLocation: v.response.venue
         });
         document.querySelector('.opening_screen').focus();
-      }).catch(function(error) {
-            console.log(error);
-         });
+      }).catch(error => { this.error();});
   }
 
   info(){
@@ -99,7 +97,7 @@ error(){
 
           closing_win={this.closing}
           click_m={this.Click_Marker}
-           onerror={this.error}
+           onError={this.error}
            />
 
         {this.state.sLocation && (<InformationScreen

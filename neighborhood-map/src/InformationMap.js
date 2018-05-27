@@ -7,7 +7,7 @@ class InformationMap extends Component {
     window.isMapLoaded = false;
     setTimeout(() => {
       if (!window.isMapLoaded) {
-        this.props.onerror();
+        this.props.onError();
       }
     }, 9000);
   }
@@ -19,7 +19,7 @@ class InformationMap extends Component {
        style={{marginLeft: '300px'}}>
        <CM
         isMarkerShown={this.props.locations.length > 0}
-        googleMapURL='https://maps.googleapis.com/maps/api/js?key=AIzaSyAAI8vX_aWvDGxvr4WxwONs-Kd4bZ-jS8E&callback'
+        googleMapURL='https://maps.googleapis.com/maps/api/js?key=AIzaSyAAI8vX_aWvDGxvr4WxwONs-Kd4bZ-jS8E&v=3.exp&libraries=places'
         loadingElement={<div style={{ height: `100%` }} />}
         containerElement={<div style={{ height: `100%` }} />}
         mapElement={<div style={{ height: `100%` }} />}
@@ -27,6 +27,7 @@ class InformationMap extends Component {
         closing_win={this.props.closing_win}
         click_m={this.props.click_m}
       />
+     
     </div>;
   }
 }

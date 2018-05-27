@@ -2,7 +2,15 @@ import React, { Component } from 'react';
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps";
 
 class InformationMap extends Component {
- 
+  componentDidMount() {
+    /*http://developer.et4.de/reference/current/ecMaps~eContent.MiniMap~IsMapLoaded.html*/
+    window.isMapLoaded = false;
+    setTimeout(() => {
+      if (!window.isMapLoaded) {
+        this.props.onerror();
+      }
+    }, 9000);
+  }
 
   render() {
     return <div

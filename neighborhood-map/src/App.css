@@ -26,7 +26,9 @@ body,
   height: calc(100% - 120px);
   position: fixed;
   background: #000;
+  z-index: 1;
   margin-top: 118px;
+  overflow-y: auto;
 }
 
 .location {
@@ -65,7 +67,7 @@ body,
   width: 300px;
   background: #fff;
   padding: 0 20px 20px;
-  z-index: 1;
+ 
 }
 
 .x_screen {
@@ -129,4 +131,5 @@ body,
   .side_Bar {
     width: 200px;
   }
+ 
 }

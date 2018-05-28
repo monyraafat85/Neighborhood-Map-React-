@@ -9,6 +9,10 @@ class InformationMap extends Component {
       if (!window.isMapLoaded) {
         this.props.onError();
       }
+      else {
+         /*https://developer.mozilla.org/en-US/docs/Web/API/Window/alert*/ 
+        window.alert("OOPS, loading wrong");
+      }
     }, 9000);
   }
 
@@ -19,7 +23,7 @@ class InformationMap extends Component {
        style={{marginLeft: '300px'}}>
        <CM
         isMarkerShown={this.props.locations.length > 0}
-        googleMapURL='https://maps.googleapis.com/maps/api/js?key=AIzaSyAAI8vX_aWvDGxvr4WxwONs-Kd4bZ-jS8E&v=3.exp&libraries=places'
+        googleMapURL='https://maps.googleapis.com/maps/api/js?key=AIzaSyAAI8vX_aWvDGxvr4WxwONs-Kd4bZ-jS8E&libraries=places&callback=initMap'
         loadingElement={<div style={{ height: `100%` }} />}
         containerElement={<div style={{ height: `100%` }} />}
         mapElement={<div style={{ height: `100%` }} />}

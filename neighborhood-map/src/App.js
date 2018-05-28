@@ -44,7 +44,10 @@ class App extends Component {
           sLocation: v.response.venue
         });
         document.querySelector('.opening_screen').focus();
-      }).catch(error => { this.error();});
+      }).catch(error => { this.error();
+        
+      /*https://developer.mozilla.org/en-US/docs/Web/API/Window/alert*/ 
+        window.alert(error);});
   }
 
   info(){

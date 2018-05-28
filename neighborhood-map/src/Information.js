@@ -68,7 +68,7 @@ Googleplex(){
       <ol className='location' aria-label='Location _list' role='listbox' >
         {this.LocFilter().map((t, num) =>
           <li
-              tabIndex={num + 2}   key={num}   role='option' className='place' onClick={() => {this.props.Click_place(num)}}> {t.name}
+              tabIndex="0"  key={num}   role='option' className='place' onClick={() => {this.props.Click_place(num)}}> {t.name}
           </li>
         )}
       </ol>
